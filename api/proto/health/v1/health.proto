@@ -1,0 +1,16 @@
+syntax = "proto3";
+package health;
+
+option go_package = "test.health_models";
+
+message PingRequest {
+  string msg = 1;
+}
+
+message PingResponse {
+  string msg = 1;
+}
+
+service HealthService {
+  rpc Ping (PingRequest) returns (PingResponse);
+}
