@@ -5,7 +5,7 @@ PROTO_OUT_DIR := internal/gen
 .DEFAULT_GOAL := all
 
 .PHONY: all
-all: rebuild tools-check proto-gen build
+all: rebuild tools-check proto-gen build lint
 
 build:
 	go build -o bin/main cmd/hello-svc/main.go
