@@ -1,7 +1,7 @@
 syntax = "proto3";
 package health;
 
-option go_package = "test.health_models";
+option go_package = "internal/gen/health/models";
 
 message PingRequest {
   string msg = 1;
