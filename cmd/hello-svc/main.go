@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"generic-backend-service/internal"
 	"generic-backend-service/internal/config"
 
 	"github.com/rs/zerolog"
@@ -12,6 +13,8 @@ func main() {
 	fmt.Println("Hello World")
 	cfg := config.GetDefault()
 	ConfigureLogger(cfg.LoggerInfo)
+
+	_ := internal.CreateServers(cfg)
 
 }
 

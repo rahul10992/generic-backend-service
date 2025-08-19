@@ -11,8 +11,8 @@ type Server interface {
 	Shutdown()
 }
 
-func CreateServers(config *config.Config) []*Server {
-	servers := make([]*Server, 0, 2)
+func CreateServers(config *config.Config) []Server {
+	servers := make([]Server, 0, 2)
 	servers = append(servers, grpcserver.GetNewGrpcServer(config.GrpcInfo.GRPCAddr))
 	servers = append(servers, httpserver.GetNewHttpServer(config.GrpcInfo.GRPCAddr))
 
